@@ -10,13 +10,13 @@ class JsTanInIt
      * @var array
      * 配置
      */
-    private array $config;
+    private $config;
 
     /**
      * @var array
      * 公共请求参数
      */
-    private array $publicRequestParams;
+    private $publicRequestParams;
 
     /**
      * @param array $config

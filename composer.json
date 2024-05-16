@@ -4,7 +4,7 @@
     "keywords": ["JuShuiTan", "ERP"],
     "type": "library",
     "require": {
-        "php": ">=7.1",
+        "php": ">=7.x",
         "guzzlehttp/guzzle": "^6.x"
     },
     "license": "MIT",

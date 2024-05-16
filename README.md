@@ -4,21 +4,17 @@
 
 
 ## 介绍
+修改支持php >= 7.1
 
-时隔一年，没有怎么维护旧版本，并且有很多问题，代码如屎山，这次进行了重构，2.0 版本（虽然代码还是屎山）
 
-聚水潭php-sdk
-
-遇到问题先去查阅官方文档 [聚水潭文档](https://openweb.jushuitan.com/dev-doc)
 
 ## 要求
 
-- php >= 8.1（其他 php 版本理论支持，但是未经过测试，请自行修改 php 版本号）
-
+- php >= 7.1
 ## 安装
 
 ```
-composer require zmoyi/jstan
+composer require zy/jstan
 ```
 
 ### laravel 使用移步至 [laravel-jsTan](https://github.com/zmoyi/laravel-jstan)

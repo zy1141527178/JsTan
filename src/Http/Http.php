@@ -9,13 +9,13 @@ class Http
     /**
      * 储存实例
      */
-    private static ?Http $instance = null;
+    private static $instance = null;
 
     /**
      * @var Client
      * Guzzle客户端
      */
-    private Client $client;
+    private $client;
 
     public function __construct($config = [])
     {

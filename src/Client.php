@@ -7,14 +7,14 @@ use JsTan\Http\Http;
 
 class Client extends JsTanInIt
 {
-    private static ?Client $instance = null;
+    private static $instance = null;
 
     /**
      * @param string $url
      * @param array $data
      * @return Exception|GuzzleException|string
      */
-    private function post(string $url,array $data): Exception|string|GuzzleException
+    private function post(string $url,array $data)
     {
         $config = $this->getConfig();
         $http = Http::getInstance($config)->getClient();
@@ -36,7 +36,7 @@ class Client extends JsTanInIt
      * @return Exception|string|GuzzleException
      * 请求接口
      */
-    public function request(string $url,array $data): Exception|string|GuzzleException
+    public function request(string $url,array $data)
     {
         $config = $this->getConfig();
         $publicRequestParams = $this->getPublicRequestParams();
@@ -48,7 +48,7 @@ class Client extends JsTanInIt
      * @return string
      * 获取授权链接
      */
-    public function createAuthUrl(): string
+    public function createAuthUrl()
     {
         $config = $this->getConfig();
         $data = [
@@ -69,7 +69,7 @@ class Client extends JsTanInIt
      * @return Exception|string|GuzzleException
      * 获取access_token（getInitToken）[商家自研系统授权流程](https://openweb.jushuitan.com/doc?docId=23)
      */
-    public function getInitToken($code): Exception|string|GuzzleException
+    public function getInitToken($code)
     {
         $data = [
             'app_key' => $this->getConfig()['appKey'],
@@ -87,7 +87,7 @@ class Client extends JsTanInIt
      * @return Exception|string|GuzzleException
      * 获取access_token（accessToken）[第三方授权流程](https://openweb.jushuitan.com/doc?docId=25)
      */
-    public function getAccessToken($code): Exception|string|GuzzleException
+    public function getAccessToken($code)
     {
         $data = [
             'app_key' => $this->getConfig()['appKey'],
@@ -105,7 +105,7 @@ class Client extends JsTanInIt
      * @return Exception|string|GuzzleException
      * 刷新access_token
      */
-    public function refreshToken($refreshToken): Exception|string|GuzzleException
+    public function refreshToken($refreshToken)
     {
         $data = [
             'app_key' => $this->getConfig()['appKey'],
@@ -127,12 +127,12 @@ class Client extends JsTanInIt
      * @return Client
      * 获取实例
      */
-    public static function getInstance(array $config = []): Client
+    public static function getInstance(array $config = [])
     {
-        if(self::$instance == null ||self::$instance->getConfig() !== $config ){
+        if(self::$instance == null || self::$instance->getConfig() !== $config ){
             self::$instance = new self($config);
         }
         return self::$instance;
     }
-    
+
 }

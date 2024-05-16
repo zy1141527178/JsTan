@@ -289,9 +289,9 @@ class Route
      * @var array
      * 路由
      */
-    private array $routes = [];
+    private $routes = [];
 
-    private static ?Route $instance =null;
+    private static $instance =null;
 
 
     /**

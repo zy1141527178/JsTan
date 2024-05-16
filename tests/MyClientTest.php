@@ -6,7 +6,7 @@ use PHPUnit\Framework\TestCase;
 
 class MyClientTest extends TestCase
 {
-    private array $config = [
+    private $config = [
         // 授权地址
         'authUrl' => 'https://openweb.jushuitan.com/auth',
         // 接口地址

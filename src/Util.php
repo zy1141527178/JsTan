@@ -8,9 +8,9 @@ class Util
      * @var array
      * 公共参数
      */
-    protected static array $params;
+    protected static $params;
 
-    protected static Util $instance;
+    protected static $instance;
 
     public function __construct(array $params = [])
     {

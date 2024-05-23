@@ -129,9 +129,8 @@ class Client extends JsTanInIt
      */
     public static function getInstance(array $config = [])
     {
-        if(self::$instance == null || self::$instance->getConfig() !== $config ){
-            self::$instance = new self($config);
-        }
+        //解决只获取第一次配置问题
+        self::$instance = new self($config);
         return self::$instance;
     }
 
